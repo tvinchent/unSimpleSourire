@@ -1,0 +1,11 @@
+            - name: FTP Deploy
+  uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+  with:
+    # ftp server
+    server: ${{ secrets.FTP_SERVER }}
+    # ftp username
+    username: ${{ secrets.FTP_NAME }}
+    # ftp password
+    password: ${{ secrets.FTP_PWD }}
+    # Path to upload to on the server. Must end with trailing slash /
+    server-dir: www/
