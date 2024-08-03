@@ -1,11 +1,30 @@
 name: FTP Deploy
-  uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-  with:
-    # ftp server
-    server: ${{ secrets.FTP_SERVER }}
-    # ftp username
-    username: ${{ secrets.FTP_NAME }}
-    # ftp password
-    password: ${{ secrets.FTP_PWD }}
-    # Path to upload to on the server. Must end with trailing slash /
-    server-dir: www/
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          # ftp server
+          server: ${{ secrets.FTP_SERVER }}
+          # ftp username
+          username: ${{ secrets.FTP_NAME }}
+          # ftp password
+          password: ${{ secrets.FTP_PWD }}
+          # Path to upload to on the server. Must end with trailing slash /
+          server-dir: www/
+          # To enable or disable git-ftp (defaults to false)
+          git-ftp: true
+          # Set to 'false' to remove files on the server that are not in the repo (defaults to 'true')
+          sync-mode: true
