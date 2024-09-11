@@ -1,0 +1,56 @@
+.logo-header {
+    width: 50px;
+    border-radius: 20%; /* Bords arrondis */
+  
+    object-fit: cover; /* Assure que l'image remplisse bien le conteneur, même si elle est recadrée */
+  }
+  
+  .logo-footer {
+  
+  
+    border-radius: 10%; /* Bords arrondis */
+  
+    object-fit: cover; /* Assure que l'image remplisse bien le conteneur, même si elle est recadrée */
+  }
+  
+  .maincolor{
+    background: #38C3FF;
+  
+  }
+  
+  .titreBienvenue{
+    color: #38C3FF;
+    font-family: 'Lora', sans-serif;
+  }
+  
+  .titreSection{
+    font-family: 'Lora', sans-serif;
+    color: #004E70;
+  }
+  
+  .logo{
+    width: 100%;
+  }
+  body {
+    font-family: 'Lora', sans-serif; /* Définit la police d'écriture */
+  
+  }
+  .cta{
+    background-color: #004E70;
+  }
+  
+  .nav-link{
+    font-family: 'Lora', sans-serif;
+  }
+  
+  .gray{
+    background-color: rgb(243, 243, 243);
+  }
+  
+  .texte{
+    font-family: 'Lora', sans-serif;
+  }
+  
+  .lora{
+    
+  }
